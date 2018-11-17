@@ -8,6 +8,7 @@
     separatorcolor: #6C7A80;
     scrollbarcolor: #C5C8C6;
 
+    font: "Deja Vu Sans 12.5";
     font-size: 1px;
     border-color: @separatorcolor;
     background-color: @backgroundcolor;
@@ -41,7 +42,7 @@
 #element {
     padding: 5;
     border: 0 0 1 0;
-    border-color: @separatorcolor;
+    border-color: @backgroundcolor;
     background-color: @backgroundcoloralternate;
 }
 
