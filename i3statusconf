@@ -1,0 +1,105 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+        color_good = '#8AE234'
+        color_degraded = '#F0C674'
+        color_bad = '#A54242'
+}
+
+#order += "ipv6"
+#order += "run_watch DHCP"
+#order += "run_watch VPNC"
+#order += "path_exists VPN"
+#order += "disk /home"
+
+order += "cpu_temperature 0"
+order += "cpu_usage"
+order += "wireless wlp4s0"
+order += "ethernet eth0"
+order += "battery 0"
+order += "volume master"
+order += "tztime date"
+order += "tztime local"
+
+wireless wlp4s0 {
+        format_up = "%quality at %essid, %bitrate"
+        format_down = "down"
+}
+
+ethernet enp0s31f6 {
+        # if you use %speed, i3status requires the cap_net_admin capability
+        format_up = "%ip (%speed)"
+        #format_down = ""
+}
+
+battery 0 {
+        format = "%status %percentage %remaining"
+        format_down = "No battery"
+        #status_chr = "⚡CHR"
+        #status_bat = "🔋 BAT"
+        #status_unk = "?UNK"
+        #status_full = "☻ FULL"
+        status_chr = "⚡"
+        status_bat = ""
+        status_unk = "?"
+        status_full = "☻"
+        low_threshold = 10
+        threshold_type = "percentage"
+
+        hide_seconds = true
+
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPNC {
+        # file containing the PID of a vpnc process
+        pidfile = "/var/run/vpnc/pid"
+}
+
+path_exists VPN {
+        # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+        path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+tztime date {
+        format = "%Y-%m-%d"
+}
+
+tztime local {
+        format = "%H:%M"
+}
+
+tztime berlin {
+        format = "%Y-%m-%d %H:%M:%S %Z"
+        timezone = "Europe/Berlin"
+}
+
+load {
+        format = "%1min"
+}
+
+cpu_temperature 0 {
+        format = "%degrees°C"
+}
+
+disk "/home" {
+        format = "%free"
+}
+
+volume master {
+    format = "%volume"
+    format_muted = "%volume"
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+cpu_usage {
+    format = "%usage"
+}

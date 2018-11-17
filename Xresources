@@ -1,0 +1,67 @@
+! xrdb ~/.Xresources
+Xft.lcdfilter: lcddefault
+
+URxvt.geometry: 100x40
+
+URxvt.perl-ext-common:    tabbed,resize-font,foo,autocomplete-ALL-the-things
+
+URxvt.font:                xft:Source Code Pro:pixelsize=17
+URxvt.boldFont:            xft:Source Code Pro:pixelsize=17:bold
+URxvt.italicFont:          xft:Source Code Pro:pixelsize=17:italic
+URxvt.boldItalicFont:      xft:Source Code Pro:pixelsize=17:bold:italic
+URxvt.cursorColor:         #A54242
+URxvt.letterSpace:         -1
+URxvt.saveLines: 10000
+
+*background: #232C31
+*foreground: #C5C8C6
+! black
+*color0: #2D3C46
+*color8: #425059
+! red
+*color1: #A54242
+*color9: #CC6666
+! green
+!*color2: #8C9440
+*color2: #8AE234
+*color10: #B5BD68
+! yellow
+*color3: #DE935F
+*color11: #F0C674
+!*color16: #FCE63C
+! blue
+!*color4: #5F819D
+*color4: #0076D8
+*color12: #7fC4FF
+!*color12: #81A2BE
+!*color20: #7aa7cc
+! magenta
+*color5: #85678F
+*color13: #B294BB
+! cyan
+*color6: #5E8D87
+*color14: #8ABEB7
+! white
+*color7: #6C7A80
+*color15: #C5C8C6
+
+URxvt.internalBorder:      0
+URxvt.externalBorder:      0
+
+URxvt.scrollBar:           false
+
+URxvt*fading:              20
+
+URxvt.keysym.F11:          perl:fullscreen:switch
+
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger:  C-Up
+
+URxvt.url-launcher:        /usr/bin/chromium
+URxvt.keysym.M-Delete:     perl:matcher:list
+URxvt.colorUL:             #7780a1
+
+
+URxvt.keysym.M-C-slash:   perl:aAtt:word-complete
+URxvt.keysym.M-question:  perl:aAtt:fuzzy-complete
+URxvt.keysym.M-quotedbl:  perl:aAtt:undo
