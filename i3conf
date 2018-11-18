@@ -175,7 +175,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     status_command i3status
-    font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:DejaVu Sans Mono, FontAwesome 12.2
     colors {
         background #000000
         statusline $white
