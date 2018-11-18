@@ -182,10 +182,10 @@ bar {
         separator $darkwhite
 
         # workspace indicators	border	backgr.	text focused_workspace
-        active_workspace   $darkblue $darkred $white
-        inactive_workspace "#333333" "#222222" $darkwhite
-        urgent_workspace   #2f343a #900000 #ffffff
-        binding_mode       #2f343a #900000 #ffffff
+        focused_workspace   $darkblue $darkblue $white
+        inactive_workspace  "#333333" "#222222" $darkwhite
+        urgent_workspace    "#2f343a" $darkred  $white
+        binding_mode        "#2f343a" $darkred  $white
     }
 }
 
