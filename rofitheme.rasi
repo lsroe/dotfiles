@@ -6,11 +6,11 @@
     selectioncolor: #A54242;
     bg1: #C5C8C6;
     separatorcolor: #6C7A80;
-    scrollbarcolor: #C5C8C6;
+    scrollbarcolor: #434c5e;
 
     font: "Deja Vu Sans 12.5";
     font-size: 1px;
-    border-color: @separatorcolor;
+    border-color: @backgroundcolor;
     background-color: @backgroundcolor;
     text-color: @foregroundcolor;
     margin: 0;
@@ -41,7 +41,7 @@
 
 #element {
     padding: 5;
-    border: 0 0 1 0;
+    border: 0 0 0 0;
     border-color: @backgroundcolor;
     background-color: @backgroundcoloralternate;
 }
@@ -51,7 +51,7 @@
     text-color: @foregroundcolorinverse;
     border-radius: 0px;
 
-    border: 0 0 1 0;
+    border: 0 0 0 0;
     border-color: @separatorcolor;
 }
 
