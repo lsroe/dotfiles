@@ -29,7 +29,7 @@
 #window {
     background-color: @backgroundcolor;
     border-color: @separatorcolor;
-    border: 1;
+    border: 0;
     border-radius: 2px;
 }
 
@@ -80,7 +80,7 @@
     border: 0 solid 0 solid 1 solid 0 solid;
     margin: 0;
     spacing: 0;
-    border-color: @separatorcolor;
+    border-color: @scrollbarcolor;
 }
 
 #prompt {
