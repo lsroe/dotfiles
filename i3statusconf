@@ -23,8 +23,8 @@ order += "tztime date"
 order += "tztime local"
 
 wireless wlp4s0 {
-        format_up = "%quality at %essid, %bitrate"
-        format_down = "down"
+        format_up = "%quality at %essid, %bitrate"
+        format_down = "down"
 }
 
 ethernet enp0s31f6 {
@@ -36,14 +36,10 @@ ethernet enp0s31f6 {
 battery 0 {
         format = "%status %percentage %remaining"
         format_down = "No battery"
-        #status_chr = "⚡CHR"
-        #status_bat = "🔋 BAT"
-        #status_unk = "?UNK"
-        #status_full = "☻ FULL"
-        status_chr = "⚡"
-        status_bat = ""
+        status_chr = ""
+        status_bat = ""
         status_unk = "?"
-        status_full = "☻"
+        status_full = ""
         low_threshold = 10
         threshold_type = "percentage"
 
@@ -93,8 +89,8 @@ disk "/home" {
 }
 
 volume master {
-    format = "%volume"
-    format_muted = "%volume"
+    format = " %volume"
+    format_muted = " %volume"
     device = "default"
     mixer = "Master"
     mixer_idx = 0

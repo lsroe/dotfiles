@@ -196,24 +196,14 @@ bar {
 
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $sink -- +10%
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $sink -- -10%
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $sink toggle
-
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
-# Sreen brightness controls
-#bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-#bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
-
-# Screen brightness controls with notification
-bindsym XF86MonBrightnessUp exec "light -A 5"
-#; notify-send 'brightness up'" # increase screen brightness with notification
-bindsym XF86MonBrightnessDown exec "light -U 5"
-#; notify-send 'brightness down'" # decrease screen brightness with notification
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
 
 #REDSHIFT
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
@@ -234,10 +224,8 @@ bindsym $mod+shift+x exec "loginctl lock-session"
 #Wallpaper
 exec_always feh --bg-fill /home/linus/Pictures/Saved\ Pictures/RAW_2016_06_29_01_05_17_036.jpg
 
-
 ## Plasma Integration
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace and hides everythiing)
-
 exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
