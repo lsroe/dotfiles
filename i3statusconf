@@ -64,24 +64,19 @@ path_exists VPN {
 }
 
 tztime date {
-        format = "%Y-%m-%d"
+        format = " %Y-%m-%d"
 }
 
 tztime local {
-        format = "%H:%M"
-}
-
-tztime berlin {
-        format = "%Y-%m-%d %H:%M:%S %Z"
-        timezone = "Europe/Berlin"
+        format = " %H:%M"
 }
 
 load {
-        format = "%1min"
+        format = "%.5min"
 }
 
 cpu_temperature 0 {
-        format = "%degrees°C"
+        format = " %degrees°C"
 }
 
 disk "/home" {
@@ -97,5 +92,5 @@ volume master {
 }
 
 cpu_usage {
-    format = "%usage"
+    format = " %usage"
 }
