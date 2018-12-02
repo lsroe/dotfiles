@@ -9,15 +9,11 @@ call vundle#begin()
 
 " " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-""Plugin 'https://github.com/kien/ctrlp.vim'
-Plugin 'git://github.com/altercation/vim-colors-solarized.git'
-Plugin 'git://github.com/rakr/vim-two-firewatch'
+Plugin 'git://github.com/tpope/vim-surround'
 Plugin 'vim-airline/vim-airline'
 Plugin 'jacoborus/tender'
-Plugin 'git://github.com/tpope/vim-surround'
 Plugin 'https://github.com/Valloric/YouCompleteMe'
 Plugin 'junegunn/fzf'
-"Plugin 'CSApprox'
 
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
@@ -62,7 +58,6 @@ let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme tender
-let g:tender_airline = 1
 let g:airline_theme='tender'
 hi visual ctermbg=172 guibg=#d78700 ctermfg=255 guifg=#eeeeee
 
