@@ -27,8 +27,8 @@ URxvt.saveLines: 10000
 *color10: #B5BD68
 ! yellow
 *color3: #DE935F
-!*color11:#F0C674 #E6CD69
-*color11:#D6BE62
+!*color11:#F0C674 #D6BE62
+*color11: #E6CD69
 !*color16: #FCE63C
 
 ! blue

@@ -256,8 +256,8 @@
 [urgency_normal]
     background = "#232C31"
     frame_color = "#232C31"
-#foreground = "#e0c764"
-    foreground = "#d6be62"
+    foreground = "#e0c764"
+    #foreground = "#d6be62"
 
 
     timeout = 10
