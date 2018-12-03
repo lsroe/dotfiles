@@ -72,7 +72,7 @@
     text-color: @foregroundcolorinverse;
     border-radius: 0px;
 
-    border: 0 0 1 0;
+    border: 0 0 0 0;
     border-color: @separatorcolor;
 }
 
@@ -86,7 +86,7 @@
 #prompt {
     padding: 5;
     background-color: @backgroundcoloralternate;
-    border: 0 1 0 0;
+    border: 0 0 0 0;
 }
 
 #entry {
