@@ -19,22 +19,21 @@ Plugin 'https://github.com/airblade/vim-gitgutter'
 call vundle#end()            " required
 filetype plugin indent on    " required
 " " To ignore plugin indent changes, instead use:
-" "filetype plugin on
+" " filetype plugin on
 " "
 " " Brief help
 " " :PluginList       - lists configured plugins
 " " :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
+" " :PluginUpdate
 " " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " " :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
+" "                     auto-approve removal
 " "
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
 
-"Replaced by airline
+"Airline
 set noshowmode
-
 set laststatus=2
 
 "Colors
@@ -46,27 +45,28 @@ colorscheme tender
 let g:airline_theme='tender'
 hi visual ctermbg=172 guibg=#d78700 ctermfg=255 guifg=#eeeeee
 
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "disable auto comment
+"disable auto comment
+autocmd FileType * setlocal fo-=c fo-=r fo-=o
 
-" Indentation
-set smarttab                    " Better tabs
-set smartindent                 " Inserts new level of indentation
-set autoindent                  " Copy indentation from previous line
-set tabstop=2                   " Columns a tab counts for
-set softtabstop=4               " Columns a tab inserts in insert mode
-set shiftwidth=4                " Columns inserted with the reindent operations
-set shiftround                  " Always indent by multiple of shiftwidth
-set expandtab                   " Always use spaces instead of tabs
+"Indentation
+set smarttab                    "Better tabs
+set smartindent                 "Inserts new level of indentation
+set autoindent                  "Copy indentation from previous line
+set tabstop=2                   "Columns a tab counts for
+set softtabstop=4               "Columns a tab inserts in insert mode
+set shiftwidth=4                "Columns inserted with the reindent operations
+set shiftround                  "Always indent by multiple of shiftwidth
+set expandtab                   "Always use spaces instead of tabs
 set cindent
 set cinoptions=(0
 
 "UI config
-set number                      " show line numbers
-set showcmd                     " show command in bottom bar
-set wildmenu                    " visual autocomplete for command menu
+set number                      "show line numbers
+set showcmd                     "show command in bottom bar
+set wildmenu                    "visual autocomplete for command menu
 set title
 set scrolloff=3
-set sidescrolloff=3             " Keep at least 3 lines left/right
+set sidescrolloff=3             "Keep at least 3 lines left/right
 
 "Cursor behaviour
 let &t_ti.="\<Esc>[2 q"
@@ -76,7 +76,7 @@ let &t_te.="\<Esc>[2 q"
 
 
 "Search
-set incsearch                   " search as characters are entered
+set incsearch                   "search as characters are entered
 set ignorecase
 set smartcase                   "search case insensitive and sens only if Caps
 
