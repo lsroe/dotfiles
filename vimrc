@@ -102,10 +102,15 @@ imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 imap <leader>{ {}<ESC>i
+imap <leader>< <><ESC>i
 
 imap <leader>) ()<ESC>a
 imap <leader>] []<ESC>a
 imap <leader>} {}<ESC>a
+imap <leader>> <><ESC>a
+
+"Enter selects ycm
+let g:ycm_key_list_stop_completion = [ '<C-y>', '<Enter>' ]
 
 "Auto-center
 nmap G Gzz
