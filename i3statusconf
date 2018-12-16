@@ -24,7 +24,7 @@ order += "tztime local"
 
 wireless wlp4s0 {
         format_up = "%quality at %essid, %bitrate"
-        format_down = "down"
+        format_down = ""
 }
 
 ethernet enp0s31f6 {
