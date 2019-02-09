@@ -206,9 +206,9 @@ bar {
 set $sink `pactl list short sinks | grep RUNNING | cut -f1`
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && pactl set-sink-volume 1 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && pactl set-sink-volume 1 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle && set-sink-mute 1 toggle # mute sound
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec light -A 5
@@ -228,7 +228,10 @@ exec --no-startup-id dunst
 new_window pixel 0
 
 #Lock screen
-bindsym $mod+shift+x exec "loginctl lock-session"
+bindsym $mod+shift+p exec "loginctl lock-session"
+
+#Ranger
+bindsym $mod+shift+f exec urxvt -e ranger
 
 #Wallpaper
 exec_always feh --bg-fill /home/linus/Pictures/Saved\ Pictures/RAW_2016_06_29_01_05_17_036.jpg
