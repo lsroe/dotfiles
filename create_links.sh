@@ -2,6 +2,7 @@
 
 dotdir=~/dotfiles
 
+ln -s $dotfir/clang-format ~/.clang-format
 ln -s $dotfir/spacemacs ~/.spacemacs
 ln -s $dotdir/zshrc ~/.zshrc
 ln -s $dotdir/vimrc ~/.vim/vimrc
