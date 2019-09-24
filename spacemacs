@@ -42,7 +42,7 @@ values."
      git
      version-control
      python
-
+     ipython-notebook
      (auto-completion :variables
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t)
@@ -396,7 +396,7 @@ you should place you code here."
   ;;(c-set-offset (quote cpp-macro) 0 nil)
 
 
-  (setq python-shell-interpreter "ipython3")
+  (setq python-shell-interpreter "python3")
 
   ;;(use-package 'evil-surround)
   ;;(global-evil-surround-mode 1)
@@ -417,20 +417,20 @@ you should place you code here."
 
   (setq-default flycheck-gcc-openmp t)
 
-  (global-set-key
-   [f3]
-   (lambda ()
-     (interactive)
-     (ispell-change-dictionary "deutsch")))
-  (global-set-key
-   [f4]
-   (lambda ()
-     (interactive)
-     (ispell-change-dictionary "english")))
-
-  (global-set-key [C-M-tab] 'clang-format-region)
-
-  (setq-default ispell-program-name "aspell")
+;;  (global-set-key
+;;   [f3]
+;;   (lambda ()
+;;     (interactive)
+;;     (ispell-change-dictionary "deutsch")))
+;;  (global-set-key
+;;   [f4]
+;;   (lambda ()
+;;     (interactive)
+;;     (ispell-change-dictionary "english")))
+;;
+;;  (global-set-key [C-M-tab] 'clang-format-region)
+;;
+;;  (setq-default ispell-program-name "aspell")
 
   ;(use-package cuda-mode
   ;  :defer t)
@@ -455,7 +455,7 @@ you should place you code here."
    ["#0a0814" "#f2241f" "#67b11d" "#b1951d" "#4f97d7" "#a31db1" "#28def0" "#b2b2b2"])
  '(package-selected-packages
    (quote
-    (treepy graphql multi-term x86-lookup nasm-mode parent-mode flx pkg-info popup cuda-mode cmake-project epl ghub let-alist goto-chg yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic undo-tree smeargle orgit magit-gitflow gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup winum unfill fuzzy diminish s mips-mode powerline spinner bind-key packed async bind-map highlight wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy uuidgen request pdf-tools tablist org-projectile org-download mwim link-hint intero hlint-refactor hide-comnt helm-hoogle flyspell-correct-helm flyspell-correct eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump f company-ghci column-enforce-mode git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-commit with-editor git-gutter diff-hl hydra smartparens dash package-build evil avy anzu iedit projectile helm helm-core disaster company-c-headers cmake-mode clang-format toc-org shm org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets mmm-mode markdown-toc markdown-mode htmlize hindent helm-flyspell helm-company helm-c-yasnippet haskell-snippets gnuplot gh-md flycheck-pos-tip flycheck-haskell flycheck ess-smart-equals ess-R-object-popup ess-R-data-view ctable ess julia-mode engine-mode company-statistics company-quickhelp pos-tip company-ghc ghc haskell-mode company-cabal company-auctex company cmm-mode auto-yasnippet yasnippet auto-dictionary auctex ac-ispell auto-complete leuven-theme ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (ein skewer-mode polymode deferred websocket js2-mode simple-httpd transient lv treepy graphql multi-term x86-lookup nasm-mode parent-mode flx pkg-info popup cuda-mode cmake-project epl ghub let-alist goto-chg yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional cython-mode company-anaconda anaconda-mode pythonic undo-tree smeargle orgit magit-gitflow gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link evil-magit magit magit-popup winum unfill fuzzy diminish s mips-mode powerline spinner bind-key packed async bind-map highlight wgrep smex ivy-hydra flyspell-correct-ivy counsel-projectile counsel swiper ivy uuidgen request pdf-tools tablist org-projectile org-download mwim link-hint intero hlint-refactor hide-comnt helm-hoogle flyspell-correct-helm flyspell-correct eyebrowse evil-visual-mark-mode evil-unimpaired evil-ediff dumb-jump f company-ghci column-enforce-mode git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-commit with-editor git-gutter diff-hl hydra smartparens dash package-build evil avy anzu iedit projectile helm helm-core disaster company-c-headers cmake-mode clang-format toc-org shm org-repo-todo org-present org-pomodoro alert log4e gntp org-plus-contrib org-bullets mmm-mode markdown-toc markdown-mode htmlize hindent helm-flyspell helm-company helm-c-yasnippet haskell-snippets gnuplot gh-md flycheck-pos-tip flycheck-haskell flycheck ess-smart-equals ess-R-object-popup ess-R-data-view ctable ess julia-mode engine-mode company-statistics company-quickhelp pos-tip company-ghc ghc haskell-mode company-cabal company-auctex company cmm-mode auto-yasnippet yasnippet auto-dictionary auctex ac-ispell auto-complete leuven-theme ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe use-package spacemacs-theme spaceline smooth-scrolling restart-emacs rainbow-delimiters quelpa popwin persp-mode pcre2el paradox page-break-lines open-junk-file neotree move-text macrostep lorem-ipsum linum-relative info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu elisp-slime-nav define-word clean-aindent-mode buffer-move bracketed-paste auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(python-shell-interpreter "ipython3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
