@@ -438,6 +438,13 @@ map gR eval fm.cd(ranger.RANGERDIR)
 map g/ cd /
 map g? cd /usr/share/doc/ranger
 
+
+map gb cd ~/Dropbox
+map gI cd ~/Dropbox/studies
+map gD cd ~/Desktop
+map gC cd ~/dotfiles
+
+
 # External Programs
 map E  edit
 map du shell -p du --max-depth=1 -h --apparent-size
@@ -723,3 +730,7 @@ tmap <delete>   eval -q fm.ui.taskview.task_remove()
 tmap <C-l> redraw_window
 tmap <ESC> taskview_close
 copytmap <ESC> q Q w <C-c>
+
+# Trash
+map DD shell gio trash %s
+
