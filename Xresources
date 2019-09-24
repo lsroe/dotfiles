@@ -3,7 +3,7 @@ Xft.lcdfilter: lcddefault
 
 URxvt.geometry: 100x40
 
-URxvt.perl-ext-common:    tabbed,resize-font,foo,autocomplete-ALL-the-things
+URxvt.perl-ext-common:     tabbed,resize-font,foo,autocomplete-ALL-the-things
 
 URxvt.font:                xft:Source Code Pro:pixelsize=17
 URxvt.boldFont:            xft:Source Code Pro:pixelsize=17:bold
@@ -11,7 +11,7 @@ URxvt.italicFont:          xft:Source Code Pro:pixelsize=17:italic
 URxvt.boldItalicFont:      xft:Source Code Pro:pixelsize=17:bold:italic
 URxvt.cursorColor:         #A54242
 URxvt.letterSpace:         -1
-URxvt.saveLines: 10000
+URxvt.saveLines:           10000
 
 *background: #232C31
 *foreground: #C5C8C6
@@ -52,7 +52,7 @@ URxvt.externalBorder:      0
 
 URxvt.scrollBar:           false
 
-URxvt*fading:              20
+URxvt*fading:              10
 
 URxvt.keysym.F11:          perl:fullscreen:switch
 
