@@ -40,7 +40,7 @@
 }
 
 #element {
-    padding: 5;
+    padding: 7;
     border: 0 0 0 0;
     border-color: @backgroundcolor;
     background-color: @backgroundcoloralternate;
