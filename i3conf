@@ -228,10 +228,10 @@ exec --no-startup-id dunst
 new_window pixel 0
 
 #Lock screen
-bindsym $mod+shift+p exec "loginctl lock-session"
+bindsym $mod+shift+p exec urxvt -e loginctl lock-session
 
 #Ranger
-bindsym $mod+shift+f exec urxvt -e ranger
+bindsym $mod+shift+F exec urxvt -e ranger
 
 #Wallpaper
 exec_always feh --bg-fill /home/linus/Pictures/Saved\ Pictures/RAW_2016_06_29_01_05_17_036.jpg
