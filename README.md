@@ -13,7 +13,7 @@ To download just run
 
 ```console
 $ cd ~/
-$ git clone https://github.com/linusroe/dotfiles.git
+$ git clone https://github.com/lsroe/dotfiles.git
 ```
 Then to create symlinks in the relevant locations you may run
 
