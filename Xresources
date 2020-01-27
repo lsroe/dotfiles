@@ -1,5 +1,6 @@
 ! xrdb ~/.Xresources
 Xft.lcdfilter: lcddefault
+URxvt*.termName: rxvt-unicode-256color
 
 URxvt.geometry: 100x40
 
@@ -67,3 +68,4 @@ URxvt.colorUL:             #7780a1
 URxvt.keysym.M-C-slash:   perl:aAtt:word-complete
 URxvt.keysym.M-question:  perl:aAtt:fuzzy-complete
 URxvt.keysym.M-quotedbl:  perl:aAtt:undo
+

@@ -440,7 +440,7 @@ map g? cd /usr/share/doc/ranger
 
 
 map gb cd ~/Dropbox
-map gI cd ~/Dropbox/studies
+map gS cd ~/Dropbox/cs
 map gD cd ~/Desktop
 map gC cd ~/dotfiles
 
